@@ -13,8 +13,10 @@ if (isset($_POST['submit'])) {
             $tema = "Nauja zinute";
             $autorius = "Nuo: " . $name . ', ' . $email;
             $zinute =  'Tema: ' . $subject . ', zinute: ' . htmlspecialchars($message);
-            mail($to, $tema, $autorius, $zinute, $from);
-            echo "<script>alert('Thanks. Your message has been received. We will contact you soon!');</script> ";
+            //mail($to, $tema, $autorius, $zinute, $from);
+            //echo "<script>alert('Thanks. Your message has been received. We will contact you soon!');</script> ";
+            header("Location: ../public/index.php");
+            exit();
         }
     }
 }
